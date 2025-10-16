@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import FunnelLayout from "@/components/FunnelLayout";
 import OptionCard from "@/components/OptionCard";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -7,15 +7,23 @@ import {
   STEP_OPTIONS,
   STEP_TITLES,
   STEP_SUBTITLES,
-  getNextRoute,
   calculateProgress,
 } from "@/lib/funnelLogic";
-import { getSession, updateSessionAnswer, getSessionAnswers } from "@/lib/sessionStorage";
+import {
+  getSession,
+  updateSessionAnswer,
+  updateLeadData,
+  storeProgressInfo,
+  getProgressInfo,
+} from "@/lib/sessionStorage";
+import { updateLeadFunnelStep, buildLeadUpdateDto } from "@/lib/api/funnelApi";
+import { mapStepSlugToBackend, mapStepSlugFromBackend, isOutcomeStep } from "@/lib/stepMapping";
 import { toast } from "sonner";
 
 const FunnelStep = () => {
   const { sessionId, stepSlug } = useParams<{ sessionId: string; stepSlug: string }>();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Validate session
@@ -25,20 +33,42 @@ const FunnelStep = () => {
     }
   }, [sessionId, navigate]);
 
-  const handleSelectOption = (value: string) => {
-    if (!sessionId || !stepSlug) return;
+  const handleSelectOption = async (value: string) => {
+    if (!sessionId || !stepSlug || loading) return;
 
-    updateSessionAnswer(sessionId, stepSlug, value);
-    const allAnswers = getSessionAnswers(sessionId);
-    const nextRoute = getNextRoute(stepSlug, value, allAnswers);
+    setLoading(true);
 
-    setTimeout(() => {
-      if (nextRoute.type === "step") {
-        navigate(`/funnel-form/${sessionId}/${nextRoute.slug}`);
-      } else {
-        navigate(`/funnel-outcome/${sessionId}/${nextRoute.slug}`);
-      }
-    }, 200);
+    try {
+      // Map frontend slug to backend enum
+      const backendStep = mapStepSlugToBackend(stepSlug);
+
+      // Build the update DTO
+      const updateDto = buildLeadUpdateDto(stepSlug, value);
+
+      // Call the API
+      const response = await updateLeadFunnelStep(sessionId, backendStep, updateDto);
+
+      // Update session storage
+      updateSessionAnswer(sessionId, stepSlug, value);
+      updateLeadData(sessionId, updateDto);
+      storeProgressInfo(sessionId, response.stepNumber, response.totalSteps);
+
+      // Map backend response to frontend slug
+      const nextSlug = mapStepSlugFromBackend(response.nextFunnelStep);
+
+      // Navigate with a small delay for visual feedback
+      setTimeout(() => {
+        if (isOutcomeStep(response.nextFunnelStep)) {
+          navigate(`/funnel-outcome/${sessionId}/${nextSlug}`);
+        } else {
+          navigate(`/funnel-form/${sessionId}/${nextSlug}`);
+        }
+      }, 150);
+    } catch (error) {
+      console.error("Error updating lead:", error);
+      toast.error("Something went wrong. Please try again.");
+      setLoading(false);
+    }
   };
 
   if (!stepSlug || !STEP_OPTIONS[stepSlug]) {
@@ -48,7 +78,14 @@ const FunnelStep = () => {
   const options = STEP_OPTIONS[stepSlug];
   const title = STEP_TITLES[stepSlug];
   const subtitle = STEP_SUBTITLES[stepSlug];
-  const progress = calculateProgress(stepSlug);
+  
+  // Get progress info from API if available
+  const progressInfo = sessionId ? getProgressInfo(sessionId) : null;
+  const progress = calculateProgress(
+    stepSlug,
+    progressInfo?.stepNumber,
+    progressInfo?.totalSteps
+  );
 
   const showDropdown = stepSlug === "registration-country" || stepSlug === "corporate-form" || stepSlug === "erp";
   const primaryOptions = showDropdown ? options.slice(0, Math.min(8, options.length)) : options;
@@ -68,6 +105,7 @@ const FunnelStep = () => {
               title={option.label}
               description={option.description}
               onClick={() => handleSelectOption(option.value)}
+              disabled={loading}
             />
           ))}
 

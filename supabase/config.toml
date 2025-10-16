@@ -1,0 +1,2 @@
+[functions.lead-routing]
+verify_jwt = false

@@ -148,7 +148,16 @@ export function getNextRoute(
   }
 }
 
-export function calculateProgress(currentStep: string): number {
+/**
+ * Calculate progress - uses API data when available, falls back to hardcoded logic
+ */
+export function calculateProgress(currentStep: string, apiStepNumber?: number, apiTotalSteps?: number): number {
+  // Use API-provided progress if available
+  if (apiStepNumber !== undefined && apiTotalSteps !== undefined && apiTotalSteps > 0) {
+    return Math.round((apiStepNumber / apiTotalSteps) * 100);
+  }
+  
+  // Fallback to hardcoded logic
   const index = STEP_ORDER.indexOf(currentStep);
   if (index === -1) return 0;
   // +2 because we have email step before and outcome after

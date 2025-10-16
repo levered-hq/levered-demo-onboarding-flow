@@ -8,16 +8,19 @@ interface OptionCardProps {
   icon?: ReactNode;
   onClick: () => void;
   className?: string;
+  disabled?: boolean;
 }
 
-const OptionCard = ({ title, description, icon, onClick, className }: OptionCardProps) => {
+const OptionCard = ({ title, description, icon, onClick, className, disabled }: OptionCardProps) => {
   return (
     <button
       onClick={onClick}
+      disabled={disabled}
       className={cn(
         "w-full flex items-center justify-between p-5 bg-card border border-border rounded-lg",
         "hover:border-primary hover:bg-accent/5 transition-all duration-200",
         "text-left group",
+        "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:bg-card",
         className
       )}
     >
