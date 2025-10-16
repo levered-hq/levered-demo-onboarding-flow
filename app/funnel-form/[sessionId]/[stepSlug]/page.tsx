@@ -35,12 +35,12 @@ import { toast } from "sonner";
 const FunnelStep = () => {
   const params = useParams();
   const router = useRouter();
-  const sessionId = Array.isArray(params.sessionId)
+  const sessionId = Array.isArray(params?.sessionId)
     ? params.sessionId[0]
-    : params.sessionId;
-  const stepSlug = Array.isArray(params.stepSlug)
-    ? params.stepSlug[0]
-    : params.stepSlug;
+    : params?.sessionId;
+  const stepSlug = Array.isArray(params?.stepSlug)
+    ? params?.stepSlug[0]
+    : params?.stepSlug;
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

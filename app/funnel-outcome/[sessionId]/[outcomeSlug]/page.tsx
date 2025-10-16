@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -222,11 +223,13 @@ const FunnelOutcome = () => {
           </div>
 
           <div className="pt-4">
-            <img
+            <Image
               src="https://getmoss.com/public/media/images/banners/demo.png"
               alt="Moss platform preview"
               className="rounded-lg shadow-2xl w-full"
-              loading="lazy"
+              width={540}
+              height={304}
+              priority
             />
           </div>
         </div>
