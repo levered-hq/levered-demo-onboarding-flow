@@ -161,48 +161,49 @@ const FunnelOutcome = () => {
       </div>
 
       {/* Right side - Info panel */}
-      <div className="lg:w-[500px] bg-gradient-to-br from-moss-dark-green to-moss-light-green p-8 lg:p-16 text-white flex flex-col justify-between">
-        <div className="space-y-8">
-          <h2 className="text-3xl font-bold leading-tight">Here's what you can expect</h2>
+      <div className="lg:w-[540px] bg-moss-gradient p-8 lg:p-12 text-white flex flex-col justify-between min-h-screen">
+        <div className="space-y-12 flex-1 flex flex-col justify-center">
+          <div className="space-y-8">
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight">Here's what you can expect</h2>
 
-          <ol className="space-y-4 text-lg">
-            <li className="flex gap-3">
-              <span className="font-semibold">1.</span>
-              <span>Share your challenges and priorities.</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="font-semibold">2.</span>
-              <span>Get a personalized walkthrough of the platform.</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="font-semibold">3.</span>
-              <span>Receive expert advice tailored to your needs.</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="font-semibold">4.</span>
-              <span>No commitment to sign up.</span>
-            </li>
-          </ol>
+            <ol className="space-y-5 text-base lg:text-lg leading-relaxed">
+              <li className="flex gap-3">
+                <span className="font-semibold flex-shrink-0">1.</span>
+                <span>Share your challenges and priorities.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="font-semibold flex-shrink-0">2.</span>
+                <span>Get a personalized walkthrough of the platform.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="font-semibold flex-shrink-0">3.</span>
+                <span>Receive expert advice tailored to your needs.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="font-semibold flex-shrink-0">4.</span>
+                <span>No commitment to sign up.</span>
+              </li>
+            </ol>
+          </div>
 
-          <div className="pt-8">
+          <div className="pt-4">
             <img
               src="https://getmoss.com/public/media/images/banners/demo.png"
               alt="Moss platform preview"
-              className="rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl w-full"
+              loading="lazy"
             />
           </div>
         </div>
 
-        <div className="space-y-6 pt-12">
-          <div className="border-t border-white/20 pt-6">
-            <p className="text-sm font-medium mb-4">Trusted by 6,000+ finance teams</p>
-            <div className="flex items-center gap-6 flex-wrap opacity-90">
-              <div className="text-sm font-bold">PIZZA PILGRIMS</div>
-              <div className="text-sm font-bold">Flink</div>
-              <div className="text-sm font-bold">AUTO1</div>
-              <div className="text-sm font-bold">Moonfare</div>
-              <div className="text-sm font-bold">Florence</div>
-            </div>
+        <div className="space-y-6 pt-12 border-t border-white/20 mt-auto">
+          <p className="text-base font-medium">Trusted by 6,000+ finance teams</p>
+          <div className="flex items-center gap-8 flex-wrap text-white/90">
+            <div className="text-base font-bold tracking-wide">PIZZA PILGRIMS</div>
+            <div className="text-base font-bold tracking-wide">Flink*</div>
+            <div className="text-base font-bold tracking-wide">AUTO1</div>
+            <div className="text-base font-bold tracking-wide">Moonfare</div>
+            <div className="text-base font-bold tracking-wide">Florence</div>
           </div>
         </div>
       </div>

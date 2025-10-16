@@ -38,8 +38,9 @@
 
     --moss-green: 84 81% 44%;
     --moss-green-dark: 84 60% 35%;
-    --moss-dark-green: 160 50% 20%;
-    --moss-light-green: 84 65% 55%;
+    --moss-dark-green: 155 40% 15%;
+    --moss-medium-green: 135 35% 35%;
+    --moss-light-green: 115 35% 50%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -108,5 +109,9 @@
   
   .bg-moss-light-green {
     background-color: hsl(var(--moss-light-green));
+  }
+  
+  .bg-moss-gradient {
+    background: linear-gradient(135deg, hsl(var(--moss-dark-green)) 0%, hsl(var(--moss-medium-green)) 50%, hsl(var(--moss-light-green)) 100%);
   }
 }
