@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,7 +13,14 @@ interface OptionCardProps {
   disabled?: boolean;
 }
 
-const OptionCard = ({ title, description, icon, onClick, className, disabled }: OptionCardProps) => {
+const OptionCard = ({
+  title,
+  description,
+  icon,
+  onClick,
+  className,
+  disabled,
+}: OptionCardProps) => {
   return (
     <button
       onClick={onClick}
@@ -29,7 +38,9 @@ const OptionCard = ({ title, description, icon, onClick, className, disabled }: 
         <div className="flex-1">
           <div className="font-medium text-foreground text-base">{title}</div>
           {description && (
-            <div className="text-sm text-muted-foreground mt-1">{description}</div>
+            <div className="text-sm text-muted-foreground mt-1">
+              {description}
+            </div>
           )}
         </div>
       </div>

@@ -1,0 +1,5 @@
+{
+  "/page": "app/page.js",
+  "/get-started/page": "app/get-started/page.js",
+  "/funnel-form/[sessionId]/[stepSlug]/page": "app/funnel-form/[sessionId]/[stepSlug]/page.js"
+}

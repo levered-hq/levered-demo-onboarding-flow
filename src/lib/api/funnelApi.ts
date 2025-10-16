@@ -11,7 +11,10 @@ import { mapStepSlugToBackend } from "@/lib/stepMapping";
 /**
  * Build the LeadUpdateDto based on the current step and answer
  */
-export function buildLeadUpdateDto(stepSlug: string, answer: string | string[]): LeadUpdateDto {
+export function buildLeadUpdateDto(
+  stepSlug: string,
+  answer: string | string[]
+): LeadUpdateDto {
   const dto: LeadUpdateDto = {};
 
   switch (stepSlug) {
@@ -26,7 +29,9 @@ export function buildLeadUpdateDto(stepSlug: string, answer: string | string[]):
       break;
     case "pick-solution":
       // Handle array of product interests
-      dto.productInterest = (Array.isArray(answer) ? answer : [answer]) as ProductInterestEnum[];
+      dto.productInterest = (
+        Array.isArray(answer) ? answer : [answer]
+      ) as ProductInterestEnum[];
       break;
     case "card-spend":
     case "card-spend-small":
@@ -55,83 +60,21 @@ export function buildLeadUpdateDto(stepSlug: string, answer: string | string[]):
 }
 
 /**
- * Mock response for development (when Supabase is not connected)
- */
-function getMockResponse(currentStep: BackendStepEnum, updateData: LeadUpdateDto): LeadUpdatedDto {
-  console.warn("⚠️ Supabase not connected, using mock routing");
-
-  // Simple mock progression logic
-  const stepProgression: Record<BackendStepEnum, BackendStepEnum> = {
-    email: "numberOfEmployees",
-    numberOfEmployees: "registrationCountry",
-    registrationCountry: "legalForm",
-    legalForm: "productInterests",
-    productInterests: "cardSpend",
-    cardSpend: "isCreditRequired",
-    cardSpendSmallSpender: "isCreditRequired",
-    isCreditRequired: "numberOfInvoices",
-    numberOfInvoices: "erpSystem",
-    erpSystem: "demoBookingP1", // Default outcome
-    funnelIntent: "demoBookingP1",
-    engagementStage: "demoBookingP1",
-    isMicroEntityTurnoverExceeded: "legalForm",
-    waitlist: "waitlist",
-    notForYou: "notForYou",
-    demoBookingP0: "demoBookingP0",
-    demoBookingP1: "demoBookingP1",
-    demoBookingP2: "demoBookingP2",
-    selfSignup: "selfSignup",
-  };
-
-  // Simple logic: route sole traders to self-signup
-  if (currentStep === "numberOfEmployees" && updateData.numberOfEmployees === "1") {
-    return {
-      nextFunnelStep: "selfSignup",
-      waitlistReason: null,
-      selfSignupProduct: "CORPORATE_CARDS",
-      intent: "SELF_SERVE",
-      totalSteps: 9,
-      stepNumber: 2,
-    };
-  }
-
-  const nextStep = stepProgression[currentStep] || "demoBookingP1";
-  const stepNumber = Object.keys(stepProgression).indexOf(currentStep) + 1;
-
-  return {
-    nextFunnelStep: nextStep,
-    waitlistReason: null,
-    intent: "UNKNOWN",
-    totalSteps: 9,
-    stepNumber,
-  };
-}
-
-/**
- * Call the lead routing edge function
+ * Call the lead routing API route
  */
 export async function updateLeadFunnelStep(
   leadId: string,
   currentFunnelStep: BackendStepEnum,
   updateData: LeadUpdateDto
 ): Promise<LeadUpdatedDto> {
-  // Check if Supabase is connected
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-  
-  if (!supabaseUrl) {
-    // Return mock response until Supabase is connected
-    return getMockResponse(currentFunnelStep, updateData);
-  }
-
   try {
     // Construct the API URL
-    const url = `${supabaseUrl}/functions/v1/lead-routing/${leadId}/${currentFunnelStep}`;
+    const url = `/api/lead-routing/${leadId}/${currentFunnelStep}`;
 
     const response = await fetch(url, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
       },
       body: JSON.stringify(updateData),
     });
@@ -146,7 +89,6 @@ export async function updateLeadFunnelStep(
     return data;
   } catch (error) {
     console.error("Error calling lead routing API:", error);
-    // Fallback to mock response on error
-    return getMockResponse(currentFunnelStep, updateData);
+    throw error;
   }
 }

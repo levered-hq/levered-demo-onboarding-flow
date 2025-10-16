@@ -1,5 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 
 interface FunnelLayoutProps {
@@ -9,14 +11,19 @@ interface FunnelLayoutProps {
   onBack?: () => void;
 }
 
-const FunnelLayout = ({ children, progress, showBack = false, onBack }: FunnelLayoutProps) => {
-  const navigate = useNavigate();
+const FunnelLayout = ({
+  children,
+  progress,
+  showBack = false,
+  onBack,
+}: FunnelLayoutProps) => {
+  const router = useRouter();
 
   const handleBack = () => {
     if (onBack) {
       onBack();
     } else {
-      navigate(-1);
+      router.back();
     }
   };
 
@@ -41,18 +48,9 @@ const FunnelLayout = ({ children, progress, showBack = false, onBack }: FunnelLa
             xmlns="http://www.w3.org/2000/svg"
             className="text-foreground"
           >
-            <path
-              d="M4 8L8 4L12 8V28H4V8Z"
-              fill="currentColor"
-            />
-            <path
-              d="M14 12L18 8L22 12V28H14V12Z"
-              fill="currentColor"
-            />
-            <path
-              d="M24 16L28 12V28H24V16Z"
-              fill="currentColor"
-            />
+            <path d="M4 8L8 4L12 8V28H4V8Z" fill="currentColor" />
+            <path d="M14 12L18 8L22 12V28H14V12Z" fill="currentColor" />
+            <path d="M24 16L28 12V28H24V16Z" fill="currentColor" />
           </svg>
           <span className="text-2xl font-bold">moss</span>
         </div>
@@ -68,7 +66,12 @@ const FunnelLayout = ({ children, progress, showBack = false, onBack }: FunnelLa
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
           </svg>
         </div>
       </header>
