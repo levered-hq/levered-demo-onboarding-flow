@@ -36,10 +36,16 @@ const GetStarted = () => {
     <FunnelLayout progress={0}>
       <div className="space-y-8 animate-in fade-in duration-500">
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          <h1
+            className="text-4xl md:text-5xl font-bold text-foreground leading-tight"
+            data-levered-id="3c83401c77"
+          >
             Discover smarter spend management for your business.
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p
+            className="text-lg text-muted-foreground"
+            data-levered-id="04ce536ddb"
+          >
             Answer a few questions to see what Moss can do for you.
           </p>
         </div>
@@ -54,6 +60,7 @@ const GetStarted = () => {
               className="flex-1 h-14 px-6 text-base border-2 focus:border-primary"
               required
             />
+
             <Button
               type="submit"
               disabled={isLoading}
@@ -63,7 +70,10 @@ const GetStarted = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p
+            className="text-sm text-muted-foreground"
+            data-levered-id="6baa26baf5"
+          >
             You accept our{" "}
             <a href="#" className="underline hover:text-foreground">
               privacy policy
@@ -78,7 +88,10 @@ const GetStarted = () => {
 
         <div className="pt-12 border-t border-border">
           <div className="text-center space-y-6">
-            <p className="text-sm text-muted-foreground font-medium">
+            <p
+              className="text-sm text-muted-foreground font-medium"
+              data-levered-id="cac2574781"
+            >
               Trusted by 6,000+ finance teams
             </p>
             <div className="flex items-center justify-center gap-8 flex-wrap opacity-60">

@@ -19,7 +19,7 @@ const OptionCard = ({
   icon,
   onClick,
   className,
-  disabled,
+  disabled
 }: OptionCardProps) => {
   return (
     <button
@@ -31,22 +31,22 @@ const OptionCard = ({
         "text-left group",
         "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:bg-card",
         className
-      )}
-    >
+      )} data-levered-id="1707596fba">
+
       <div className="flex items-center gap-4 flex-1">
         {icon && <div className="flex-shrink-0">{icon}</div>}
         <div className="flex-1">
           <div className="font-medium text-foreground text-base">{title}</div>
-          {description && (
-            <div className="text-sm text-muted-foreground mt-1">
+          {description &&
+          <div className="text-sm text-muted-foreground mt-1">
               {description}
             </div>
-          )}
+          }
         </div>
       </div>
       <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
-    </button>
-  );
+    </button>);
+
 };
 
 export default OptionCard;

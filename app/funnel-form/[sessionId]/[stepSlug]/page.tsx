@@ -9,38 +9,38 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  SelectValue } from
+"@/components/ui/select";
 import {
   STEP_OPTIONS,
   STEP_TITLES,
   STEP_SUBTITLES,
-  calculateProgress,
-} from "@/lib/funnelLogic";
+  calculateProgress } from
+"@/lib/funnelLogic";
 import {
   getSession,
   updateSessionAnswer,
   updateLeadData,
   storeProgressInfo,
-  getProgressInfo,
-} from "@/lib/sessionStorage";
+  getProgressInfo } from
+"@/lib/sessionStorage";
 import { updateLeadFunnelStep, buildLeadUpdateDto } from "@/lib/api/funnelApi";
 import {
   mapStepSlugToBackend,
   mapStepSlugFromBackend,
-  isOutcomeStep,
-} from "@/lib/stepMapping";
+  isOutcomeStep } from
+"@/lib/stepMapping";
 import { toast } from "sonner";
 
 const FunnelStep = () => {
   const params = useParams();
   const router = useRouter();
-  const sessionId = Array.isArray(params?.sessionId)
-    ? params.sessionId[0]
-    : params?.sessionId;
-  const stepSlug = Array.isArray(params?.stepSlug)
-    ? params?.stepSlug[0]
-    : params?.stepSlug;
+  const sessionId = Array.isArray(params?.sessionId) ?
+  params.sessionId[0] :
+  params?.sessionId;
+  const stepSlug = Array.isArray(params?.stepSlug) ?
+  params?.stepSlug[0] :
+  params?.stepSlug;
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -109,85 +109,85 @@ const FunnelStep = () => {
   );
 
   const showDropdown =
-    stepSlug === "registration-country" ||
-    stepSlug === "corporate-form" ||
-    stepSlug === "erp";
-  const primaryOptions = showDropdown
-    ? options.slice(0, Math.min(8, options.length))
-    : options;
+  stepSlug === "registration-country" ||
+  stepSlug === "corporate-form" ||
+  stepSlug === "erp";
+  const primaryOptions = showDropdown ?
+  options.slice(0, Math.min(8, options.length)) :
+  options;
 
   return (
     <FunnelLayout progress={progress} showBack>
       <div className="space-y-6 animate-in fade-in duration-500">
         <div className="space-y-2">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground" data-levered-id="6f177971de">
             {title}
           </h1>
-          {subtitle && <p className="text-muted-foreground">{subtitle}</p>}
+          {subtitle && <p className="text-muted-foreground" data-levered-id="5725973ac8">{subtitle}</p>}
         </div>
 
         <div className="space-y-3 pt-4">
-          {primaryOptions.map((option) => (
-            <OptionCard
-              key={option.value}
-              title={option.label}
-              description={option.description}
-              onClick={() => handleSelectOption(option.value)}
-              disabled={loading}
-            />
-          ))}
+          {primaryOptions.map((option) =>
+          <OptionCard
+            key={option.value}
+            title={option.label}
+            description={option.description}
+            onClick={() => handleSelectOption(option.value)}
+            disabled={loading} />
 
-          {showDropdown && (
-            <div className="pt-4 space-y-3">
-              <p className="text-sm text-muted-foreground">None of these?</p>
+          )}
+
+          {showDropdown &&
+          <div className="pt-4 space-y-3">
+              <p className="text-sm text-muted-foreground" data-levered-id="583d2cba69">None of these?</p>
               <Select onValueChange={handleSelectOption}>
                 <SelectTrigger className="w-full h-14 text-base border-2">
                   <SelectValue placeholder="Select another option..." />
                 </SelectTrigger>
                 <SelectContent>
-                  {options.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
+                  {options.map((option) =>
+                <SelectItem key={option.value} value={option.value}>
                       {option.label}
                     </SelectItem>
-                  ))}
+                )}
                 </SelectContent>
               </Select>
             </div>
-          )}
+          }
 
-          {stepSlug === "is-credit-required" && (
-            <p className="text-sm text-muted-foreground pt-2">
+          {stepSlug === "is-credit-required" &&
+          <p className="text-sm text-muted-foreground pt-2" data-levered-id="bfea17f4d8">
               *Eligibility and credit checks apply
             </p>
-          )}
+          }
 
-          {stepSlug === "erp" && (
-            <div className="pt-4 space-y-3">
+          {stepSlug === "erp" &&
+          <div className="pt-4 space-y-3">
               <div className="flex items-start gap-3">
                 <input
-                  type="checkbox"
-                  id="no-software"
-                  className="mt-1 h-4 w-4 rounded border-border"
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      handleSelectOption("manual-export");
-                    }
-                  }}
-                />
+                type="checkbox"
+                id="no-software"
+                className="mt-1 h-4 w-4 rounded border-border"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    handleSelectOption("manual-export");
+                  }
+                }} />
+
                 <label
-                  htmlFor="no-software"
-                  className="text-sm text-foreground cursor-pointer"
-                >
+                htmlFor="no-software"
+                className="text-sm text-foreground cursor-pointer">
+
                   I don't want to connect any software to Moss, I will export my
                   data manually.
                 </label>
               </div>
             </div>
-          )}
+          }
         </div>
       </div>
-    </FunnelLayout>
-  );
+    </FunnelLayout>);
+
 };
 
 export default FunnelStep;

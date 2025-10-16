@@ -7,22 +7,22 @@ const Index = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
       <div className="text-center space-y-6">
-        <h1 className="mb-4 text-4xl font-bold">Moss Onboarding Funnel Demo</h1>
-        <p className="text-xl text-muted-foreground">
+        <h1 className="mb-4 text-4xl font-bold" data-levered-id="d51c9b48dc">Moss Onboarding Funnel Demo</h1>
+        <p className="text-xl text-muted-foreground" data-levered-id="f19e904631">
           B2B SaaS Multi-Step Survey
         </p>
 
         <Button
           asChild
-          className="bg-primary hover:bg-primary/90 text-primary-foreground"
-        >
+          className="bg-primary hover:bg-primary/90 text-primary-foreground">
+
           <Link href="/get-started" passHref>
             Get Started
           </Link>
         </Button>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
