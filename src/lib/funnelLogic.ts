@@ -12,7 +12,10 @@ export const STEP_ORDER = [
 ];
 
 // Step options configuration
-export const STEP_OPTIONS: Record<string, Array<{ value: string; label: string; description?: string }>> = {
+export const STEP_OPTIONS: Record<
+  string,
+  Array<{ value: string; label: string; description?: string }>
+> = {
   employees: [
     { value: "sole-trader", label: "I'm a sole trader" },
     { value: "1-5", label: "1 - 5 employees" },
@@ -47,7 +50,8 @@ export const STEP_OPTIONS: Record<string, Array<{ value: string; label: string; 
     {
       value: "spend-control",
       label: "Spend control",
-      description: "Control team spend with limits and real-time spend oversight.",
+      description:
+        "Control team spend with limits and real-time spend oversight.",
     },
     {
       value: "automate-finance",
@@ -62,29 +66,39 @@ export const STEP_OPTIONS: Record<string, Array<{ value: string; label: string; 
     { value: "100k+", label: "More than €100k / month" },
   ],
   cards_need: [
-    { value: "not-important", label: "Not important", description: "Prefunding cards is fine for now." },
+    {
+      value: "not-important",
+      label: "Not important",
+      description: "Prefunding cards is fine for now.",
+    },
     {
       value: "nice-to-have",
       label: "Nice to have",
-      description: "A line of credit to fund cards helps, but is not essential.",
+      description:
+        "A line of credit to fund cards helps, but is not essential.",
     },
     {
       value: "essential",
       label: "Essential*",
-      description: "We will only use Moss if a line of credit is available.",
+      description: "We will only use Hay if a line of credit is available.",
     },
   ],
   "is-credit-required": [
-    { value: "not-important", label: "Not important", description: "Prefunding cards is fine for now." },
+    {
+      value: "not-important",
+      label: "Not important",
+      description: "Prefunding cards is fine for now.",
+    },
     {
       value: "nice-to-have",
       label: "Nice to have",
-      description: "A line of credit to fund cards helps, but is not essential.",
+      description:
+        "A line of credit to fund cards helps, but is not essential.",
     },
     {
       value: "essential",
       label: "Essential*",
-      description: "We will only use Moss if a line of credit is available.",
+      description: "We will only use Hay if a line of credit is available.",
     },
   ],
   "number-of-invoices": [
@@ -151,12 +165,20 @@ export function getNextRoute(
 /**
  * Calculate progress - uses API data when available, falls back to hardcoded logic
  */
-export function calculateProgress(currentStep: string, apiStepNumber?: number, apiTotalSteps?: number): number {
+export function calculateProgress(
+  currentStep: string,
+  apiStepNumber?: number,
+  apiTotalSteps?: number
+): number {
   // Use API-provided progress if available
-  if (apiStepNumber !== undefined && apiTotalSteps !== undefined && apiTotalSteps > 0) {
+  if (
+    apiStepNumber !== undefined &&
+    apiTotalSteps !== undefined &&
+    apiTotalSteps > 0
+  ) {
     return Math.round((apiStepNumber / apiTotalSteps) * 100);
   }
-  
+
   // Fallback to hardcoded logic
   const index = STEP_ORDER.indexOf(currentStep);
   if (index === -1) return 0;

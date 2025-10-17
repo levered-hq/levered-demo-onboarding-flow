@@ -18,12 +18,10 @@ import { toast } from "sonner";
 const FunnelOutcome = () => {
   const params = useParams();
   const router = useRouter();
-  const sessionId = Array.isArray(params?.sessionId) ?
-  params.sessionId[0] :
-  params?.sessionId;
-  const outcomeSlug = Array.isArray(params?.outcomeSlug) ?
-  params.outcomeSlug[0] :
-  params?.outcomeSlug;
+  const sessionId = Array.isArray(params?.sessionId)
+    ? params.sessionId[0]
+    : params?.sessionId;
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -63,12 +61,21 @@ const FunnelOutcome = () => {
               <path d="M14 12L18 8L22 12V28H14V12Z" fill="currentColor" />
               <path d="M24 16L28 12V28H24V16Z" fill="currentColor" />
             </svg>
+<<<<<<< HEAD
             <span className="text-2xl font-bold" data-levered-id="69ed4160e8">moss</span>
           </div>
 
           <div className="space-y-4">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight" data-levered-id="5e0c755042">
               Moss is a great match for you! Let's set you up with a product
+=======
+            <span className="text-2xl font-bold">hay</span>
+          </div>
+
+          <div className="space-y-4">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+              Hay is a great match for you! Let's set you up with a product
+>>>>>>> tmp
               expert to find out how.
             </h1>
           </div>
@@ -183,8 +190,13 @@ const FunnelOutcome = () => {
               Book an intro
             </Button>
 
+<<<<<<< HEAD
             <p className="text-sm text-muted-foreground" data-levered-id="3dc69d2f80">
               By proceeding, you agree to Moss{" "}
+=======
+            <p className="text-sm text-muted-foreground">
+              By proceeding, you agree to Hay{" "}
+>>>>>>> tmp
               <a href="#" className="underline hover:text-foreground">
                 terms and conditions
               </a>
@@ -195,7 +207,7 @@ const FunnelOutcome = () => {
       </div>
 
       {/* Right side - Info panel */}
-      <div className="lg:w-[540px] bg-moss-gradient p-8 lg:p-12 text-white flex flex-col justify-between min-h-screen">
+      <div className="lg:w-[540px] bg-hay-gradient p-8 lg:p-12 text-white flex flex-col justify-between min-h-screen">
         <div className="space-y-12 flex-1 flex flex-col justify-center">
           <div className="space-y-8">
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight" data-levered-id="b3f058bebb">
@@ -225,7 +237,7 @@ const FunnelOutcome = () => {
           <div className="pt-4">
             <Image
               src="https://getmoss.com/public/media/images/banners/demo.png"
-              alt="Moss platform preview"
+              alt="Hay platform preview"
               className="rounded-lg shadow-2xl w-full"
               width={540}
               height={304}
