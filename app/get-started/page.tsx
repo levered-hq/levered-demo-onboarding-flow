@@ -40,7 +40,7 @@ const GetStarted = () => {
             Discover smarter spend management for your business.
           </h1>
           <p className="text-lg text-muted-foreground">
-            Answer a few questions to see what Moss can do for you.
+            Answer a few questions to see what Hay can do for you.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const GetStarted = () => {
             <a href="#" className="underline hover:text-foreground">
               consent
             </a>{" "}
-            to Moss updates. You can opt out anytime.
+            to Hay updates. You can opt out anytime.
           </p>
         </form>
 

@@ -178,7 +178,7 @@ const FunnelStep = () => {
                   htmlFor="no-software"
                   className="text-sm text-foreground cursor-pointer"
                 >
-                  I don't want to connect any software to Moss, I will export my
+                  I don't want to connect any software to Hay, I will export my
                   data manually.
                 </label>
               </div>

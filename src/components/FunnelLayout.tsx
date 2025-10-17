@@ -52,7 +52,7 @@ const FunnelLayout = ({
             <path d="M14 12L18 8L22 12V28H14V12Z" fill="currentColor" />
             <path d="M24 16L28 12V28H24V16Z" fill="currentColor" />
           </svg>
-          <span className="text-2xl font-bold">moss</span>
+          <span className="text-2xl font-bold">hay</span>
         </div>
         <div className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
