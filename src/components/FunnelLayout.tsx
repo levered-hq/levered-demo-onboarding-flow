@@ -98,7 +98,7 @@ const FunnelLayout = ({
       {/* Footer */}
       <footer className="py-6 px-6 md:px-12 text-center text-sm text-muted-foreground border-t border-border">
         <div className="flex items-center justify-center gap-6 flex-wrap">
-          <span data-levered-id="e5d76772e4">© 2019 - 2025 Nufin GmbH</span>
+          <span data-levered-id="e5d76772e4">© 2019 - 2025 Hay GmbH</span>
           <a href="#" className="hover:text-foreground transition-colors">
             Imprint
           </a>

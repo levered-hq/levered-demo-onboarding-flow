@@ -1,0 +1,9 @@
+{
+  "publicKey": "public_key_for_reading",
+  "secretKey": "secret_key_for_writing",
+  "apiEndpoint": "http://localhost:8000",
+  "llm": {
+    "provider": "gemini",
+    "apiKey": "env(GEMINI_API_KEY)"
+  }
+}

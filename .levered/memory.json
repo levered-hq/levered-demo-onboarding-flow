@@ -1,0 +1,484 @@
+{
+  "files": [
+    "/Users/sbumm/levered-demo-onboarding-flow/.gitignore",
+    "/Users/sbumm/levered-demo-onboarding-flow/.levered/levered.config.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.levered/memory.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/app-build-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/build-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/.rscinfo",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/chrome-devtools-workspace-uuid",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/next-devtools-config.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/0.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/1.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/10.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/11.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/12.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/13.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/14.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/15.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/16.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/17.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/18.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/2.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/3.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/4.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/5.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/6.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/7.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/8.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/9.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/index.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development/index.pack.gz.old",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development-fallback/0.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/client-development-fallback/index.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/0.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/1.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/10.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/11.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/12.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/13.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/14.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/15.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/16.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/2.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/3.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/4.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/5.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/6.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/7.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/8.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/9.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/index.pack.gz",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/cache/webpack/server-development/index.pack.gz.old",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/package.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/prerender-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/react-loadable-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/routes-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app/funnel-form/[sessionId]/[stepSlug]/page.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app/funnel-form/[sessionId]/[stepSlug]/page_client-reference-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app/get-started/page.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app/get-started/page_client-reference-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app/page.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app/page_client-reference-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/app-paths-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/interception-route-rewrite-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/middleware-build-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/middleware-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/middleware-react-loadable-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/next-font-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/next-font-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/pages-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/server-reference-manifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/server-reference-manifest.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/@floating-ui.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/@radix-ui.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/aria-hidden.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/class-variance-authority.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/clsx.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/get-nonce.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/lucide-react.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/next.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/react-remove-scroll-bar.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/react-remove-scroll.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/react-style-singleton.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/sonner.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/tailwind-merge.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/tslib.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/use-callback-ref.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/use-sidecar.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/vendor-chunks/uuid.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/server/webpack-runtime.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/app/funnel-form/[sessionId]/[stepSlug]/page.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/app/get-started/page.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/app/layout.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/app/not-found.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/app/page.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/app-pages-internals.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/main-app.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/polyfills.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/chunks/webpack.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/css/app/layout.css",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/development/_buildManifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/development/_ssgManifest.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/19cfc7226ec3afaa-s.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/21350d82a1f187e9-s.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/8e9860b6e62d6359-s.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/ba9851c3c22cd980-s.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/c5fe6dc8356a8c31-s.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/df0a9ae256c0569c-s.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/webpack/2edecf482b45bc44.webpack.hot-update.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/webpack/633457081244afec._.hot-update.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/webpack/803e1e4be1f1c5fd.webpack.hot-update.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/webpack/app/layout.2edecf482b45bc44.hot-update.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/webpack/webpack.2edecf482b45bc44.hot-update.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/static/webpack/webpack.803e1e4be1f1c5fd.hot-update.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/trace",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/app/funnel-form/[sessionId]/[stepSlug]/page.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/app/get-started/page.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/app/layout.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/app/page.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/cache-life.d.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/package.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/routes.d.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/.next/types/validator.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/README.md",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/api/lead-routing/[leadId]/[currentFunnelStep]/route.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-form/[sessionId]/[stepSlug]/page.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/get-started/page.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/globals.css",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/layout.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/not-found.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/app/page.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/bun.lockb",
+    "/Users/sbumm/levered-demo-onboarding-flow/components.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/eslint.config.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/justfile",
+    "/Users/sbumm/levered-demo-onboarding-flow/next-env.d.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/next.config.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/package-lock.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/package.json",
+    "/Users/sbumm/levered-demo-onboarding-flow/postcss.config.js",
+    "/Users/sbumm/levered-demo-onboarding-flow/public/favicon.ico",
+    "/Users/sbumm/levered-demo-onboarding-flow/public/placeholder.svg",
+    "/Users/sbumm/levered-demo-onboarding-flow/public/robots.txt",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/FunnelLayout.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/OptionCard.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/accordion.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/alert-dialog.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/alert.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/aspect-ratio.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/avatar.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/badge-variants.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/badge.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/breadcrumb.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/button-variants.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/button.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/calendar.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/card.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/carousel.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/chart.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/checkbox.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/collapsible.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/command.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/context-menu.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/dialog.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/drawer.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/dropdown-menu.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/form.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/hover-card.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/input-otp.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/input.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/label.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/menubar.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/navigation-menu.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/pagination.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/popover.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/progress.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/radio-group.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/resizable.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/scroll-area.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/select.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/separator.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sheet.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sidebar.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/skeleton.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/slider.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sonner-toast.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sonner.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/switch.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/table.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/tabs.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/textarea.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/toast.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/toaster.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/toggle-group.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/toggle-variants.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/toggle.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/tooltip.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/use-toast.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/hooks/use-mobile.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/hooks/use-toast.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/lib/api/funnelApi.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/lib/funnelLogic.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/lib/sessionStorage.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/lib/stepMapping.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/lib/utils.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelStep.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/pages/GetStarted.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/pages/Index.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/pages/NotFound.tsx",
+    "/Users/sbumm/levered-demo-onboarding-flow/src/types/leadTypes.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/tailwind.config.ts",
+    "/Users/sbumm/levered-demo-onboarding-flow/tsconfig.json"
+  ],
+  "elements": {
+    "6f177971de": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-form/[sessionId]/[stepSlug]/page.tsx"
+    },
+    "5725973ac8": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-form/[sessionId]/[stepSlug]/page.tsx"
+    },
+    "583d2cba69": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-form/[sessionId]/[stepSlug]/page.tsx"
+    },
+    "bfea17f4d8": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-form/[sessionId]/[stepSlug]/page.tsx"
+    },
+    "69ed4160e8": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "5e0c755042": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "7878df5701": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "3dc69d2f80": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "b3f058bebb": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "8fb723dac6": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "56447f7708": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "075792c8b3": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "e74130f073": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "d108c57819": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "70deaa95ca": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "dc63f3cd78": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "1db72144de": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "1b29f5f55b": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/funnel-outcome/[sessionId]/[outcomeSlug]/page.tsx"
+    },
+    "3c83401c77": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/get-started/page.tsx"
+    },
+    "04ce536ddb": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/get-started/page.tsx"
+    },
+    "6baa26baf5": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/get-started/page.tsx"
+    },
+    "cac2574781": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/get-started/page.tsx"
+    },
+    "7064bb7c9e": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/not-found.tsx"
+    },
+    "01b1719ccf": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/not-found.tsx"
+    },
+    "d51c9b48dc": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/page.tsx"
+    },
+    "f19e904631": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/app/page.tsx"
+    },
+    "f4af21cbbc": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/FunnelLayout.tsx"
+    },
+    "8139123608": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/FunnelLayout.tsx"
+    },
+    "8a73d776e6": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/FunnelLayout.tsx"
+    },
+    "e5d76772e4": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/FunnelLayout.tsx"
+    },
+    "1707596fba": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/OptionCard.tsx"
+    },
+    "5711c7f5fc": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/alert.tsx"
+    },
+    "8546076341": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/breadcrumb.tsx"
+    },
+    "e7e7658c5f": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/breadcrumb.tsx"
+    },
+    "480e584b4c": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/breadcrumb.tsx"
+    },
+    "a3914a7c09": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/card.tsx"
+    },
+    "19f19e86ae": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/card.tsx"
+    },
+    "825d2e2b64": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/carousel.tsx"
+    },
+    "b0bc61d1f7": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/carousel.tsx"
+    },
+    "8305fe5c8c": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/chart.tsx"
+    },
+    "e7f3be49f4": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/chart.tsx"
+    },
+    "687057126c": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/command.tsx"
+    },
+    "5bced0bbdb": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/context-menu.tsx"
+    },
+    "43e6d65ebc": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/context-menu.tsx"
+    },
+    "00410535ae": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/context-menu.tsx"
+    },
+    "970fd78d02": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/dialog.tsx"
+    },
+    "1e573b8597": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/dropdown-menu.tsx"
+    },
+    "b2eb1e7981": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/dropdown-menu.tsx"
+    },
+    "757179da9c": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/dropdown-menu.tsx"
+    },
+    "6c1918352f": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/form.tsx"
+    },
+    "e310fddabd": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/form.tsx"
+    },
+    "2e68f1f588": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/menubar.tsx"
+    },
+    "abd4d2a037": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/menubar.tsx"
+    },
+    "66b3b0f196": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/menubar.tsx"
+    },
+    "e992525c63": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/pagination.tsx"
+    },
+    "fcb3b19cec": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/pagination.tsx"
+    },
+    "e985e32267": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/pagination.tsx"
+    },
+    "321a8f0a7e": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/pagination.tsx"
+    },
+    "669f01901d": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/select.tsx"
+    },
+    "8409e0b7c8": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sheet.tsx"
+    },
+    "5e0ba901c5": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sidebar.tsx"
+    },
+    "a86ccad9dc": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/components/ui/sidebar.tsx"
+    },
+    "bf6abe9e99": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "36978969d6": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "8d972d6629": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "d298fcf23d": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "a6998e49b0": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "7a46526d10": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "b663d378de": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "dee43631fe": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "263618c98a": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "bb8eaf5290": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "7999f75767": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "2e888eb0f3": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "6e76b7ffc8": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "2e173abf7c": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelOutcome.tsx"
+    },
+    "40c591e0cf": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelStep.tsx"
+    },
+    "2e8d3daa58": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelStep.tsx"
+    },
+    "3b2a6de839": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelStep.tsx"
+    },
+    "57005a77b4": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/FunnelStep.tsx"
+    },
+    "0e08303241": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/GetStarted.tsx"
+    },
+    "220aab0452": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/GetStarted.tsx"
+    },
+    "bcc06d2e73": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/GetStarted.tsx"
+    },
+    "85b821cc97": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/GetStarted.tsx"
+    },
+    "d78f1ef3dd": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/Index.tsx"
+    },
+    "d355083b0c": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/Index.tsx"
+    },
+    "7bc848d4e4": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/NotFound.tsx"
+    },
+    "eee536abc0": {
+      "filePath": "/Users/sbumm/levered-demo-onboarding-flow/src/pages/NotFound.tsx"
+    }
+  },
+  "lastScanned": "2025-10-17T13:22:36.499Z"
+}
