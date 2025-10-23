@@ -17,43 +17,48 @@ relink-client:
     @echo "🚀 Relinking local @levered/client from '{{LEVERED_CLIENT_PATH}}'..."
 
     # 2. Clean up old state
-    @echo "\n[STEP 1/8] Removing old symlink from this project..."
+    @echo "\n[STEP 1/9] Removing old symlink from this project..."
     @rm -f ./node_modules/@levered/client
     @echo "    -> Done."
 
-    # 3. Perform a clean build of the client
-    @echo "\n[STEP 2/8] Performing a clean build of the client..."
+    # 3. Install dependencies in the client monorepo
+    @echo "\n[STEP 2/9] Installing dependencies in client monorepo..."
+    @(cd '{{LEVERED_CLIENT_PATH}}' && npm install)
+    @echo "    -> Done."
+
+    # 4. Perform a clean build of the client
+    @echo "\n[STEP 3/9] Performing a clean build of the client..."
     @echo "    -> Removing old 'dist' directory..."
     @rm -rf '{{LEVERED_CLIENT_PATH}}/packages/client/dist'
     @echo "    -> Running build script..."
     @(cd '{{LEVERED_CLIENT_PATH}}' && npm run build --workspace=@levered/client)
 
-    # 3. Perform a clean build of the agent
-    @echo "\n[STEP 3/8] Performing a clean build of the agent..."
+    # 5. Perform a clean build of the agent
+    @echo "\n[STEP 4/9] Performing a clean build of the agent..."
     @echo "    -> Removing old 'dist' directory..."
     @rm -rf '{{LEVERED_CLIENT_PATH}}/packages/agent/dist'
     @echo "    -> Running build script..."
     @(cd '{{LEVERED_CLIENT_PATH}}' && npm run build --workspace=@levered/agent)
 
-    # 4. Verify that the build artifacts exist
-    @echo "\n[STEP 4/8] Verifying build artifacts exist..."
+    # 6. Verify that the build artifacts exist
+    @echo "\n[STEP 5/9] Verifying build artifacts exist..."
     @echo "    -> Listing contents of '{{LEVERED_CLIENT_PATH}}/packages/client/dist':"
     @ls -l '{{LEVERED_CLIENT_PATH}}/packages/client/dist'
 
-    # 5. Create the global link for the client package
-    @echo "\n[STEP 5/8] Creating global link for @levered/client..."
+    # 7. Create the global link for the client package
+    @echo "\n[STEP 6/9] Creating global link for @levered/client..."
     @(cd '{{LEVERED_CLIENT_PATH}}/packages/client' && npm link)
 
-    # 6. Create the global link for the agent package
-    @echo "\n[STEP 6/8] Creating global link for @levered/agent..."
+    # 8. Create the global link for the agent package
+    @echo "\n[STEP 7/9] Creating global link for @levered/agent..."
     @(cd '{{LEVERED_CLIENT_PATH}}/packages/agent' && npm link)
 
-    # 7. Create the local link MANUALLY
-    @echo "\n[STEP 7/8] Manually creating local symlink to global package..."
+    # 9. Create the local link MANUALLY
+    @echo "\n[STEP 8/9] Manually creating local symlink to global package..."
     @ln -s `npm root -g`/@levered/client ./node_modules/@levered/client
     @echo "    -> Verifying local symlink in `pwd`/node_modules:"
     @ls -l ./node_modules/@levered/client
 
-    # 8. Final verification
-    @echo "\n[STEP 8/8] Verifying Node.js can resolve the module..."
+    # 10. Final verification
+    @echo "\n[STEP 9/9] Verifying Node.js can resolve the module..."
     @node -e 'try { require.resolve("@levered/client"); console.log("✅ Success! Module resolved correctly."); } catch (e) { console.error("❌ Error: Module could not be resolved."); process.exit(1); }'
